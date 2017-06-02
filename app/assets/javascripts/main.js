@@ -27,7 +27,7 @@ function ForModifyGallery() {
     if (files.length > 0) {
       $('.before_thumbnail').removeClass('hidden');
       $('.photo-gallery-form').removeClass('hidden');
-      $('.before_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
+      // $('.before_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
       $('.before_thumbnail').css('background-size', 'cover');
       $('.before_thumbnail').css('background-repeat', 'no-repeat');
       $('.before_thumbnail').css('background-position', 'center center');
@@ -40,7 +40,7 @@ function ForModifyGallery() {
     if (files.length > 0) {
       $('.before_thumbnail').removeClass('hidden');
       $('.photo-gallery-form').removeClass('hidden');
-      $('.before_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
+      // $('.before_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
       $('.before_thumbnail').css('background-size', 'cover');
       $('.before_thumbnail').css('background-repeat', 'no-repeat');
       $('.before_thumbnail').css('background-position', 'center center');
@@ -53,7 +53,7 @@ function ForModifyGallery() {
     if (files.length > 0) {
       $('.after_thumbnail').removeClass('hidden');
       $('.photo-gallery-form').removeClass('hidden');
-      $('.after_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
+      // $('.after_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
       $('.after_thumbnail').css('background-size', 'cover');
       $('.after_thumbnail').css('background-repeat', 'no-repeat');
       $('.after_thumbnail').css('background-position', 'center center');
@@ -66,7 +66,7 @@ function ForModifyGallery() {
     if (files.length > 0) {
       $('.after_thumbnail').removeClass('hidden');
       $('.photo-gallery-form').removeClass('hidden');
-      $('.after_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
+      // $('.after_thumbnail').css('background', `url("${window.URL.createObjectURL(files[0])}")`);
       $('.after_thumbnail').css('background-size', 'cover');
       $('.after_thumbnail').css('background-repeat', 'no-repeat');
       $('.after_thumbnail').css('background-position', 'center center');
