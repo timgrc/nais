@@ -1,0 +1,26 @@
+<section id="photos" class="photos-section">
+  <div class="wrapper-photos">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2>GALERIE</h2>
+          <h3>Vous trouverez ici quelques exemples de maquillages permanents réalisés à l'institut</h3>
+        </div>
+      </div>
+      <% if user_signed_in? %>
+        <div class="row form-photo">
+      <%= render 'form_photo' %>
+        </div>
+      <% end %>
+      <div class="row" id="gallery">
+        <div id="testo"></div>
+        <%= render 'gallery' %>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center" id="gallery-pagination">
+          <%= paginate @photos, remote: true %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

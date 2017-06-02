@@ -1,0 +1,17 @@
+<% @photos.each do |photo| %>
+  <div class="col-xs-12 col-sm-6 col-md-3 text-center photo-gallery-item">
+    <%=
+    if user_signed_in?
+      link_to "", class: "photo-gallery-modify" do %>
+        <%= render 'photo_div', photo: photo, type: 'page', mode: :admin %>
+      <% end
+    else
+      link_to "#gallery#{photo.id}", {'data-fancybox' => 'gallery', 'data-caption' => photo.description} do %>
+          <%= render 'photo_div', photo: photo, type: 'page', mode: :normal %>
+        <div id="gallery<%= photo.id %>" style="display: none;">
+          <%= render 'photo_div', photo: photo, type: 'fancybox', mode: :normal %>
+        </div>
+      <% end
+    end %>
+  </div>
+<% end %>

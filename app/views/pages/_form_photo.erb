@@ -1,0 +1,26 @@
+<%= simple_form_for(@photo_gallery) do |f| %>
+  <%= f.input :description %>
+  <%= f.radio_button :has_photo_before, :true, checked: 'checked' %>
+  <%= label :has_photo_before, 'Oui' %>
+  <%= f.radio_button :has_photo_before, :false %>
+  <%= label :has_photo_before, 'Non' %>
+  <%= f.input :photo_before, label: 'Photo avant' %>
+  <%= f.input :photo_after, label: 'Photo après' %>
+  <%= f.input :photo_before_cache, as: :hidden %>
+  <%= f.input :photo_after_cache, as: :hidden %>
+  <%= f.submit %>
+<% end %>
+<div class='photo-gallery-div photo-gallery-form hidden'>
+  <div class="photo-gallery-before-div before_thumbnail hidden" style="width: 100%; max-width: 400px; height: 194px;">
+    <p class="before-after-flag">AVANT</p>
+    <div class="gallery-delete-btn" style="top: 10px; right: 10px;">
+      <button type="button" class="btn btn-default btn-danger before_cancel"><i class="fa fa-times"></i></button>
+    </div>
+  </div>
+  <div class="photo-gallery-after-div after_thumbnail hidden" style="width: 100%; max-width: 400px; height: 194px;">
+    <p class="before-after-flag">APRÈS</p>
+    <div class="gallery-delete-btn" style="top: 10px; right: 10px;">
+      <button type="button" class="btn btn-default btn-danger after_cancel"><i class="fa fa-times"></i></button>
+    </div>
+  </div>
+</div>

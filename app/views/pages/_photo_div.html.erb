@@ -1,0 +1,27 @@
+<div class='photo-gallery-div <%= "photo-gallery-div-#{type}" %>'>
+  <% if mode == :admin %>
+    <div class="gallery-modify-container">
+        <%= link_to edit_photo_gallery_path(photo), remote: true, class: 'gallery-modify-btn' do %>
+          <i class="fa fa-edit"></i>
+        <% end %>
+    </div>
+    <%= link_to '#', data: {photo: photo.id}, class: 'gallery-delete-btn' do %>
+      <i class="fa fa-trash"></i>
+    <% end
+  end %>
+  <% if photo.has_photo_before != false %>
+    <div class="photo-gallery-before-div">
+      <p class="before-after-flag">AVANT</p>
+      <%= cl_image_tag photo.photo_before, height: 194, width: 400, crop: :fill, class: "photo-gallery-before" %>
+    </div>
+    <div class="photo-gallery-after-div">
+      <p class="before-after-flag">APRÈS</p>
+      <%= cl_image_tag photo.photo_after, height: 194, width: 400, crop: :fill, class: "photo-gallery-after" %>
+    </div>
+  <% else %>
+    <div class="photo-gallery-after-only-div">
+      <%= cl_image_tag photo.photo_after, height: 402, width: 400, crop: :fill, class: "photo-gallery-after" %>
+    </div>
+  <% end %>
+</div>
+

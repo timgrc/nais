@@ -1,0 +1,28 @@
+$(".form-photo").html("<%= j render 'pages/form_photo', photo_gallery: @photo_gallery %>");
+<% if @photo_gallery.has_photo_before %>
+  $("#photo_gallery_has_photo_before_true").prop("checked", true);
+  $('.photo_gallery_photo_before').show();
+  $(".photo_gallery_photo_after label").html("Photo après");
+  $('.before_thumbnail').removeClass('hidden');
+  $('.before_thumbnail').css('background', 'url("<%= @photo_gallery.photo_before %>")');
+  $('.before_thumbnail').css('background-size', 'cover');
+  $('.before_thumbnail').css('background-repeat', 'no-repeat');
+  $('.before_thumbnail').css('background-position', 'center center');
+  $('.photo-gallery-after-div').height('194px');
+  $('.before-after-flag').removeClass('hidden');
+<% else %>
+  $("#photo_gallery_has_photo_before_false").prop("checked", true);
+  $('.photo_gallery_photo_before').hide();
+  $(".photo_gallery_photo_after label").html("Photo");
+  $('.photo-gallery-after-div').height('402px');
+  $('.before-after-flag').addClass('hidden');
+<% end %>
+
+$('.after_thumbnail').removeClass('hidden');
+$('.photo-gallery-form').removeClass('hidden');
+$('.after_thumbnail').css('background', 'url("<%= @photo_gallery.photo_after %>")');
+$('.after_thumbnail').css('background-size', 'cover');
+$('.after_thumbnail').css('background-repeat', 'no-repeat');
+$('.after_thumbnail').css('background-position', 'center center');
+
+ForModifyGallery();

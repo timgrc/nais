@@ -1,0 +1,2 @@
+$('#gallery').html('<%= escape_javascript(raw(render 'gallery')) %>');
+$('#gallery-pagination').html('<%= escape_javascript(paginate(@photos, remote: true)) %>');
