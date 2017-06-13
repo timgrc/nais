@@ -3,9 +3,8 @@ class ContactMailer < ApplicationMailer
     # @contact = contact
 
     mail(
-      :subject => 'Hello from Postmark',
       :to  => 'contact@nais-maquillage-permanent.fr',
-      :from => 'contact@nais-maquillage-permanent.fr',
-      :track_opens => 'true')
+      :subject => 'Hello from Postmark'
+    )
   end
 end
