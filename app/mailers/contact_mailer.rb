@@ -1,7 +1,11 @@
 class ContactMailer < ApplicationMailer
-  def contact
-    @greeting = "Hi"
+  def contact(contact)
+    @contact = contact
 
-    mail to: "grc.tmt@gmail.com", subject: 'Test'
+    mail(
+      :subject => 'Hello from Postmark',
+      :to  => 'contact@nais-maquillage-permanent.fr',
+      :from => 'contact@nais-maquillage-permanent.fr',
+      :track_opens => 'true')
   end
 end

@@ -1,8 +1,8 @@
 class ContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :create ]
   def create
-    Contact.new(contact_params)
-    ContactMailer.contact.deliver_now
+    contact = Contact.new(contact_params)
+    ContactMailer.contact(contact).deliver_now
   end
 
   def contact_params
