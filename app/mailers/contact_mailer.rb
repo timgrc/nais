@@ -1,6 +1,6 @@
 class ContactMailer < ApplicationMailer
-  def contact(contact)
-    @contact = contact
+  def contact
+    # @contact = contact
 
     mail(
       :subject => 'Hello from Postmark',
