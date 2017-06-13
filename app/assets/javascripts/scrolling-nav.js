@@ -25,8 +25,10 @@ $(function() {
 
   $(document).on('click', 'a.page-scroll', function(event) {
     var $anchor = $(this);
-    $('header').removeClass('op');
-    closeMenu();
+    if($('header').hasClass('op')) {
+      $('header').removeClass('op');
+      closeMenu();
+    }
     $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top - $('header nav').data('small')
     }, 1500, 'easeInOutExpo');

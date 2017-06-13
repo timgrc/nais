@@ -141,6 +141,7 @@ header nav li a{
 }
 header nav li a:hover, header nav li a:focus {
   text-decoration: none;
+  color: $nais-blue;
 }
 
 header nav .container-fluid, .navbar-header {
@@ -398,6 +399,20 @@ header nav .container-fluid, .navbar-header {
   margin: auto;
 }
 
+.services-div .modal-content {
+  padding: 65px;
+}
+
+@media (max-width: $screen-sm-max) {
+  .services-div-inside {
+    padding: 60px 10px;
+  }
+
+  .services-div .modal-content {
+    padding: 55px 25px;
+  }
+}
+
 .services-div h2 {
   text-align: center;
   font-size: 30px;
@@ -534,7 +549,7 @@ header nav .container-fluid, .navbar-header {
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin: 0 25px 25px 25px;
 }
 
 .wrapper-rdv h3 {
@@ -583,6 +598,7 @@ header nav .container-fluid, .navbar-header {
   font-size: 16px;
   letter-spacing: 0px;
   color: #727981;
+  padding: 0 10px;
   margin-bottom: 40px;
 }
 
@@ -733,7 +749,7 @@ header nav .container-fluid, .navbar-header {
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin: 0 25px 25px 25px;
 }
 
 .wrapper-contact h3 {
@@ -773,6 +789,10 @@ header nav .container-fluid, .navbar-header {
   display: block;
   font-size: 40px;
   margin-bottom: 15px;
+}
+
+#contact form {
+  margin: 0 25px;
 }
 
 /* -------------------------------------
