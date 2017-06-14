@@ -9,11 +9,11 @@ class ContactsController < ApplicationController
       to: 'contact@nais-maquillage-permanent.fr',
       subject: 'Contact de nais-maquillage-permanent.fr',
       html_body: "
-      <strong>CONTACT DE NAIS-MAQUILLAGE-PERMANENT.FR</strong><br><br>
-      <strong>Nom :</strong> #{contact.name}<br>
-      <strong>Email :</strong> #{contact.email}<br>
-      <strong>Message :</strong><br>
-      #{contact.message}<br>
+        <strong>CONTACT DE NAIS-MAQUILLAGE-PERMANENT.FR</strong><br><br>
+        <strong>Nom :</strong> #{contact.name}<br>
+        <strong>Email :</strong> #{contact.email}<br>
+        <strong>Message :</strong><br>
+        #{contact.message}<br>
       ",
       track_opens: true
     )
