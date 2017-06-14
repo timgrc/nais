@@ -5,8 +5,8 @@ class ContactsController < ApplicationController
     # ContactMailer.contact.deliver_now
     client = Postmark::ApiClient.new(ENV['POSTMARK_API_KEY'])
     client.deliver(
-      from: 'sender@example.com',
-      to: 'receiver@example.com',
+      from: 'contact@nais-maquillage-permanent.fr',
+      to: 'contact@nais-maquillage-permanent.fr',
       subject: 'hello',
       html_body: '<strong>Hello from Postmark!<strong>',
       track_opens: true
