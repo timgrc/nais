@@ -179,7 +179,7 @@ header nav .container-fluid, .navbar-header {
 @media (max-width: $screen-sm-max) {
   header .bt-menu{
     display: block;
-    position:absolute;
+    position: absolute;
     width:54px;
     height:54px;
     cursor:pointer;
@@ -311,18 +311,21 @@ header nav .container-fluid, .navbar-header {
   background: image-url('bouche.jpg');
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #services-eyeliner .card-services-img {
   background: image-url('permanent-eyeliner.jpg');
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #services-eyebrows .card-services-img {
   background: image-url('sourcils.jpg');
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .card-picto {
@@ -728,6 +731,11 @@ header nav .container-fluid, .navbar-header {
   text-decoration: none;
   color: $nais-blue;
 }
+
+.form-photo form {
+  margin: -20px 40px 20px 40px;
+}
+
 /* -------------------------------------
  * CONTACT
  * ------------------------------------- */

@@ -1,14 +1,14 @@
 <%= simple_form_for(@photo_gallery) do |f| %>
   <%= f.input :description %>
   <%= f.radio_button :has_photo_before, :true, checked: 'checked' %>
-  <%= label :has_photo_before, 'Oui' %>
+  <%= label :has_photo_before, 'Avec photo avant' %>
   <%= f.radio_button :has_photo_before, :false %>
-  <%= label :has_photo_before, 'Non' %>
+  <%= label :has_photo_before, 'Sans photo avant' %>
   <%= f.input :photo_before, label: 'Photo avant' %>
   <%= f.input :photo_after, label: 'Photo après' %>
   <%= f.input :photo_before_cache, as: :hidden %>
   <%= f.input :photo_after_cache, as: :hidden %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-success' %>
 <% end %>
 <div class='photo-gallery-div photo-gallery-form hidden'>
   <div class="photo-gallery-before-div before_thumbnail hidden" style="width: 100%; max-width: 400px; height: 194px;">
