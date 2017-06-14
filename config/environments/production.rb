@@ -3,7 +3,7 @@ Rails.application.configure do
   config.action_mailer.postmark_settings   = {
     api_token: ENV['POSTMARK_API_KEY'] }
   config.action_mailer.default_url_options = {
-    host: "nais-maquillage-permanent.herokuapp.com" }
+    host: "nais-maquillage-permanent.fr" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
