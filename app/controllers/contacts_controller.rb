@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   def create
     Contact.new(contact_params)
     ContactMailer.contact.deliver_now
+    redirect_to "/#contact"
   end
 
   def contact_params
