@@ -20,7 +20,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'kaminari'
-# gem 'postmark-rails'
+gem 'postmark-rails'
 gem 'postmark'
 
 group :development, :test do
