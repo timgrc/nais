@@ -8,7 +8,7 @@
   <%= f.input :photo_after, label: 'Photo après' %>
   <%= f.input :photo_before_cache, as: :hidden %>
   <%= f.input :photo_after_cache, as: :hidden %>
-  <%= f.submit class: 'btn btn-success' %>
+  <%= f.submit "#{f.object.new_record? ? 'Ajouter une photo' : 'Modifier une photo'}", class: 'btn btn-success' %>
 <% end %>
 <div class='photo-gallery-div photo-gallery-form hidden'>
   <div class="photo-gallery-before-div before_thumbnail hidden" style="width: 100%; max-width: 400px; height: 194px;">
