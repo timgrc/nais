@@ -93,7 +93,7 @@ function ForModifyGallery() {
     }
   });
 
-  $('.gallery-delete-btn').on('click', function(e) {
+  $('.gallery-delete-btn-to-confirm').on('click', function(e) {
     e.preventDefault();
     var photoId = $(this).data('photo');
     swal({
