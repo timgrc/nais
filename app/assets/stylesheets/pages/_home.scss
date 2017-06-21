@@ -489,6 +489,14 @@ header nav .container-fluid, .navbar-header {
   background: $nais-blue;
   color: white;
 }
+.fancy-title {
+  color: #0f7991;
+  font-weight: 600;
+}
+
+#services .modal-content {
+  font-size: 14px;
+}
 
 /* -------------------------------------
  * PRICES
