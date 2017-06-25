@@ -1,3 +1,15 @@
+/* -------------------------------------
+ * GENERAL
+ * ------------------------------------- */
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 .border-red {
   border: 1px solid red;
 }
@@ -263,6 +275,12 @@ header nav .container-fluid, .navbar-header {
   color: white;
 }
 
+.logo-title {
+  width: 90%;
+  max-width: 240px;
+  margin-bottom: 18px;
+}
+
 /* -------------------------------------
  * SERVICES
  * ------------------------------------- */
@@ -280,12 +298,6 @@ header nav .container-fluid, .navbar-header {
   letter-spacing: 2px;
   color: #434244;
 }
-// .services-subtitle {
-//   font-family: 'Lora', 'serif';
-//   font-size: 18px;
-//   letter-spacing: 1px;
-//   color: grey;
-// }
 
 .cards-services {
   display: flex;
@@ -296,15 +308,18 @@ header nav .container-fluid, .navbar-header {
   margin: 20px;
 }
 
+#services .container-fluid .row {
+  display: flex;
+}
+
 @media (max-width: $screen-sm-max) {
   .cards-services {
     display: block;
   }
-}
 
-#services .container-fluid .row {
-  display: flex;
-  flex-wrap: wrap;
+  #services .container-fluid .row {
+    flex-wrap: wrap;
+  }
 }
 
 #services-lips .card-services-img {
@@ -443,12 +458,7 @@ header nav .container-fluid, .navbar-header {
   align-items: flex-end;
 }
 
-.services-div-welcome h2 {
-  // color: #d6d6d6;
-}
-
 .services-div-nais {
-  // height: 400px;
   background: image-url('nais.jpg');
   background-position: center center;
   background-size: cover;
