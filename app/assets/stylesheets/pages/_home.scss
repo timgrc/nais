@@ -378,6 +378,7 @@ header nav .container-fluid, .navbar-header {
 }
 
 .card-services-infos {
+  display: block;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 0;
@@ -387,6 +388,12 @@ header nav .container-fluid, .navbar-header {
   color: white;
   font-size: 14px;
   padding: 10px;
+}
+
+.card-services-infos:hover, .card-services-infos:focus {
+  text-decoration: none;
+  color: white;
+  background: #0f7991;
 }
 
 .services-div {

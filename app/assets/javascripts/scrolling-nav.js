@@ -34,6 +34,14 @@ $(function() {
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
   });
+
+  $(document).on('click', '.cards-services a', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top - $('header nav').data('small')
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
+  });
 });
 
 function sectionActive() {
