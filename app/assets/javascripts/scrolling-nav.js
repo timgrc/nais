@@ -58,7 +58,7 @@ function sectionActive() {
 }
 
 function navHeight() {
-  if ($(window).scrollTop() === 0) {
+  if ($(window).scrollTop() === 0 && $(window).width() > 992) {
     $('header nav').height($('header nav').data('big') + 'px');
   } else {
     $('header nav').height($('header nav').data('small') + 'px');
