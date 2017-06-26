@@ -128,10 +128,6 @@ $(window).resize(function() {
   resizeGallery();
 });
 
-$(window).load(function() {
-  // $('.photo-gallery-item').removeClass("hidden");
-});
-
 $(function() {
   resizeGallery();
   ForModifyGallery();
